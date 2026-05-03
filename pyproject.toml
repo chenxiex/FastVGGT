@@ -8,7 +8,7 @@ dependencies = [
     "safetensors",
     "opencv-python",
 ]
-name = "vggt"
+name = "fastvggt"
 requires-python = ">= 3.10"
 version = "0.0.1"
 
