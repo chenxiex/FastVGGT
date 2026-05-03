@@ -302,6 +302,8 @@ def write_ply(file: Path, points):
 
 
 def extract_points_tensor(points, mask, colors):
+    # colors: (3, H, W) -> (H, W, 3) so mask (H, W) can index correctly
+    colors = colors.permute(1, 2, 0)
     return torch.cat([points[mask], colors[mask].float()], dim=-1)
 
 
